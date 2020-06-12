@@ -25,16 +25,34 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-.menu-custom-css .modal-wrapper{
-    // height:fit-content;
-    // --overflow: hidden !important;
-    // overflow-y: hidden !important;
-    // min-height: 40vh;
-    // height: auto;
-    ion-content{
-        --overflow:hidden;
+ion-modal.auto-height {
+    &.bottom {
+        align-items: flex-end;
     }
 
-    max-height: 100%;
-    // height: auto;
+    --height: auto;
+
+    @media screen 
+    and (min-device-width: 320px) 
+    and (max-width: 768px){
+        .inner-content {
+            height: 100vh !important;
+            max-height: 100vh !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--ion-color-dark);
+        }
+    }
+    
+    .ion-page {
+        position: relative;
+        display: block;
+        contain: content;
+
+        .inner-content {
+            max-height: 80vh;
+            overflow: auto;
+        }
+    }
 }

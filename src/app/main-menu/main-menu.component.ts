@@ -26,7 +26,7 @@ export class MainMenuComponent implements OnInit {
   async openMenuModal() {
     const modal = await this.modalCtrl.create({
       component: MenuPage,
-      cssClass: 'menu-custom-css',
+      cssClass: 'auto-height',
       swipeToClose: true,
     });
     return await modal.present();
