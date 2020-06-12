@@ -1,0 +1,30 @@
+<ion-content class="container">
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)="openPage('home')">
+        <ion-icon name="home"></ion-icon>
+        <strong><p>HOME</p></strong>
+      </ion-col>
+      <ion-col (click)="openPage('about')">
+        <ion-icon name="person-circle"></ion-icon>
+        <strong><p>ABOUT</p></strong>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="openPage('resume')">
+        <ion-icon name="document"></ion-icon>
+        <strong><p>RESUME</p></strong>
+      </ion-col>
+      <ion-col (click)="openPage('contact')">
+        <ion-icon name="send"></ion-icon>
+        <strong><p>CONTACT</p></strong>
+      </ion-col>
+    </ion-row>
+    <ion-row class="final-row">
+      <ion-col>
+        <ion-icon (click)="dismiss()" name="close"></ion-icon>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+</ion-content>

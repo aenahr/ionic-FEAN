@@ -1,0 +1,12 @@
+.about-wrapper{
+    --padding-top: 3rem;
+    max-width: 15cm;
+    position: relative;
+    left:50%;
+    transform: translate(-50%, 0);
+
+    .btn:hover{
+        // background: var(--ion-color-secondary) !important;
+        --background-hover: var(--ion-color-danger) !important;
+    }
+}

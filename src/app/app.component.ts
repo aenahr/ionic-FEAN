@@ -10,15 +10,28 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  /* Variable that determines whether user is in browser or in native app */
+  private isMobile;
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
   ) {
+
+    // check for what platform user is in
+    if(this.platform.is('mobile')){
+      this.isMobile = true;
+    }
+    else{
+      this.isMobile = false;
+    }
+    
     this.initializeApp();
   }
 
   initializeApp() {
+
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();

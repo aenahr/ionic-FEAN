@@ -24,3 +24,17 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.menu-custom-css .modal-wrapper{
+    // height:fit-content;
+    // --overflow: hidden !important;
+    // overflow-y: hidden !important;
+    // min-height: 40vh;
+    // height: auto;
+    ion-content{
+        --overflow:hidden;
+    }
+
+    max-height: 100%;
+    // height: auto;
+}

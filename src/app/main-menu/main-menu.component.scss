@@ -1,0 +1,22 @@
+ion-icon{
+    font-size: 45px;
+}
+
+ion-title{
+    color: var(--ion-color-light);
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+#menu-button{
+    padding:0;
+    margin:0;
+    background: transparent;
+}
+
+.container{
+    background-color: var(--ion-color-dark);
+}
